@@ -1,3 +1,12 @@
 from django.db import models
 
-# Create your models here.
+
+class TaskType(models.Model):
+    name = models.CharField(max_length=255)
+
+    class Meta:
+        verbose_name_plural = "Task Types"
+        ordering = ("name",)
+
+    def __str__(self):
+        return self.name
