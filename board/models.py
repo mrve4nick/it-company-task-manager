@@ -13,7 +13,7 @@ class Position(models.Model):
 
 
 class Worker(AbstractUser):
-    position = models.ManyToManyField(Position, blank=False, related_name="workers")
+    position = models.ManyToManyField(Position, blank=False, related_name="worker")
 
 
 PRIORITY_CHOICES = (
